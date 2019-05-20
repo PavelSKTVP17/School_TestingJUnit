@@ -21,7 +21,7 @@ public class CalculatorImplTest
     private CalculatorImpl CALC;
     
     @Before
-    public void setUp()    { CALC=new CalculatorImpl();   }
+    public void setUp() throws Exception{ CALC=new CalculatorImpl();   }
     
     @Test
     public void zeroTest() throws Exception
