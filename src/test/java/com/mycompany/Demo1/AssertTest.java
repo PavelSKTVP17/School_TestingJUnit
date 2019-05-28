@@ -42,6 +42,11 @@ public class AssertTest
     {
         assertEquals("llo", "Hello".substring(3));
     }
+    @Test(expected = ArithmeticException.class)
+    public void divideByZero() 
+    {
+        assertEquals(10/0, 25 ,1e-9);
+    }
     /*@Test
     public void demo_test() 
     {

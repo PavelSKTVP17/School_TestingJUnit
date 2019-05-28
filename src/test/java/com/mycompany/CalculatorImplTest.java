@@ -5,6 +5,7 @@
  */
 package com.mycompany;
 
+import jdk.nashorn.internal.objects.Global;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -52,6 +53,12 @@ public class CalculatorImplTest
     {
         double resl = new CalculatorImpl().calculate("sin(1)*sin(1)+cos(1)*cos(1)");
         assertEquals(1, resl,1e-9);
+    }
+    @Test
+    public void divideByZero() throws Exception
+    {
+        double resl = new CalculatorImpl().calculate("1234/0");
+        assertEquals(Global.Infinity, resl,1e-9);
     }
     /*
     public CalculatorImplTest() {
