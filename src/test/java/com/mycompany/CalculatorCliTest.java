@@ -54,7 +54,7 @@ public class CalculatorCliTest
         when(CALCMOCK.calculate("1")).thenReturn(1d);
         when(CALCMOCK.calculate("2")).thenReturn(2d);
         when(CALCMOCK.calculate("3")).thenReturn(3d);
-        Thread.sleep(1100);
+        //Thread.sleep(1100);
         CLI.runInteractiveSession(new StringReader("1;2;3"));
         verify(CALCMOCK).calculate("1");
         verify(CALCMOCK).calculate("2");
